@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './style.css';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -18,17 +19,17 @@ const Navbar = () => {
         {isCollapsed ? '☰' : '✕'}
       </button>
       <ul className="nav-links">
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Nursery</a></li>
-        <li><a href="#">Incubator Rooms</a></li>
-        <li><a href="#">Incubators</a></li>
-        <li><a href="#">Brooders</a></li>
-        <li><a href="#">Eggs</a></li>
+        <li><Link to="/dashboard">Dashboard</Link></li>
+        <li><Link to="/nursery">Nursery</Link></li>
+        <li><Link to="/incubatorroom">Incubator Rooms</Link></li>
+        <li><Link to="/incubators">Incubators</Link></li>
+        <li><Link to="/brooders">Brooders</Link></li>
+        <li><Link to="/eggs">Eggs</Link></li>
         <li className="divider"></li>
-        <li><a href="#">Ingredient</a></li>
-        <li><a href="#">Recipe</a></li>
-        <li><a href="#">Diet</a></li>
-        <li><a href="#">Feed Type</a></li>
+        <li><Link to="/ingredient">Ingredient</Link></li>
+        <li><Link to="/recipe">Recipe</Link></li>
+        <li><Link to="/diet">Diet</Link></li>
+        <li><Link to="/feedtype">Feed Type</Link></li>
       </ul>
     </div>
   );

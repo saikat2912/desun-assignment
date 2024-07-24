@@ -12,7 +12,7 @@ export const Dashboard =()=>{
 
     return(
         <>
-        <div style={{ marginLeft: '250px', padding: '20px' ,width:'100vw'}}>
+        <div style={{ marginLeft: '250px', padding: '20px' ,width:'80vw'}}>
         {/* Your main content goes here */}
         <div style={{float:'right'}}>
             <Header/>
@@ -29,7 +29,7 @@ export const Dashboard =()=>{
 
         <DashboardTable/>
         <PopUp/>
-        <EggList/>
+       
         </div>
       </div>
       </>
