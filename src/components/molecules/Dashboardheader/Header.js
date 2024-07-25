@@ -16,8 +16,8 @@ const DashboardHeader = () => {
   };
 
   return (
-    <LocalizationProvider dateAdapter={AdapterDateFns}>
-      <Box p={2}>
+    <LocalizationProvider dateAdapter={AdapterDateFns} >
+      <Box p={2} >
         <Typography variant="subtitle1" gutterBottom>
           Egg Module / Dashboard
         </Typography>

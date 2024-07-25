@@ -1,5 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
     margin: 0;
     padding: 0;
 }
@@ -30,9 +31,9 @@ body {
 }
 
 .logo {
-    width: 30px;
+    width: 150px;
     height: 30px;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .toggle-button {
@@ -51,9 +52,8 @@ body {
 }
 
 .nav-links li {
-    width: 100%;
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 
 .nav-links a {
@@ -63,7 +63,7 @@ body {
     color: white;
     text-decoration: none;
     transition: background 0.3s;
-    text-align: center;
+    
 }
 
 .nav-links a:hover {
@@ -80,3 +80,26 @@ body {
     padding-left: 0;
     padding-right: 0;
 }
+
+.list-item{
+
+    padding-top: -3px;
+}
+
+
+
+  
+  .nav-links li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white; /* Or your preferred color */
+  }
+  
+  .nav-links li svg {
+    margin-right: 8px; /* Add space between the icon and the text */
+  }
+  
+  .nav-links li .list-item {
+    font-size: 1rem; /* Adjust the font size if needed */
+  }

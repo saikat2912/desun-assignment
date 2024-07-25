@@ -1,49 +1,152 @@
 import React from 'react';
-import { Box, Typography, Grid, Avatar ,Paper} from '@mui/material';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { blue, green, teal, red } from '@mui/material/colors';
+import { Box, Grid, Typography, useTheme } from '@mui/material';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+import { Bar } from 'react-chartjs-2';
 
-const data = [
-  { name: 'In Nest', value: 48, color: blue[400] },
-  { name: 'In Nursery', value: 99, color: green[300] },
-  { name: 'Good Condition', value: 82, color: teal[300] },
-  { name: 'Discarded', value: 33, color: red[200] },
-];
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
-const SummaryCard = () => {
+const DashboardCard = () => {
+  const theme = useTheme();
+
+  const data = {
+    labels: ['In Nest', 'In Nursery', 'Good Condition', 'Discarded'],
+    datasets: [
+      {
+        label: 'Eggs',
+        data: [48, 99, 82, 33],
+        backgroundColor: [
+          theme.palette.primary.light,
+          theme.palette.success.light,
+          theme.palette.info.light,
+          theme.palette.error.light,
+        ],
+        borderRadius: 10,
+        barThickness: 20,
+      },
+    ],
+  };
+
+  const options = {
+    indexAxis: 'y',
+    scales: {
+      x: {
+        beginAtZero: true,
+        max: 100,
+      },
+    },
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  };
+
   return (
-    <Box component={Paper} padding={2} borderRadius={2}>
-      <Typography variant="h6" component="div">
-        Todays Collection - <span style={{ color: green[700] }}>262 Eggs</span>
+    <Box
+      sx={{
+        backgroundColor: '#fff',
+        borderRadius: 1,
+        padding: 2,
+        boxShadow: 1,
+      }}
+    >
+      <Typography variant="h6" sx={{ mb: 2 }}>
+        Todays Collection - <span style={{ color: theme.palette.success.main }}>262 Eggs</span>
       </Typography>
-      <Grid container spacing={2} alignItems="center">
-        <Grid item xs={7}>
-          <ResponsiveContainer width="100%" height={150}>
-            <BarChart data={data} layout="vertical">
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis type="number" />
-              <YAxis type="category" dataKey="name" />
-              <Tooltip />
-              {data.map((entry, index) => (
-                <Bar key={`bar-${index}`} dataKey="value" fill={entry.color} />
-              ))}
-            </BarChart>
-          </ResponsiveContainer>
+      <Grid container spacing={2}>
+        <Grid item xs={8}>
+          <Bar data={data} options={options} />
         </Grid>
-        <Grid item xs={5}>
-          {data.map((entry, index) => (
-            <Box key={index} display="flex" alignItems="center" mb={1}>
-              <Avatar style={{ backgroundColor: entry.color, marginRight: 8 }} />
-              <Typography variant="body1" style={{ color: entry.color, marginRight: 4 }}>
-                {entry.value}
+        <Grid item xs={4}>
+          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <Box
+                sx={{
+                  width: 8,
+                  height: 8,
+                  borderRadius: '50%',
+                  backgroundColor: theme.palette.primary.light,
+                  mr: 1,
+                }}
+              />
+              <Typography variant="body2" sx={{ flex: 1 }}>
+                In Nest
               </Typography>
-              <Typography variant="body2">{entry.name}</Typography>
+              <Typography variant="body2" sx={{ color: theme.palette.primary.main }}>
+                48
+              </Typography>
             </Box>
-          ))}
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <Box
+                sx={{
+                  width: 8,
+                  height: 8,
+                  borderRadius: '50%',
+                  backgroundColor: theme.palette.success.light,
+                  mr: 1,
+                }}
+              />
+              <Typography variant="body2" sx={{ flex: 1 }}>
+                In Nursery
+              </Typography>
+              <Typography variant="body2" sx={{ color: theme.palette.success.main }}>
+                99
+              </Typography>
+            </Box>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <Box
+                sx={{
+                  width: 8,
+                  height: 8,
+                  borderRadius: '50%',
+                  backgroundColor: theme.palette.info.light,
+                  mr: 1,
+                }}
+              />
+              <Typography variant="body2" sx={{ flex: 1 }}>
+                Good Condition
+              </Typography>
+              <Typography variant="body2" sx={{ color: theme.palette.info.main }}>
+                82
+              </Typography>
+            </Box>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <Box
+                sx={{
+                  width: 8,
+                  height: 8,
+                  borderRadius: '50%',
+                  backgroundColor: theme.palette.error.light,
+                  mr: 1,
+                }}
+              />
+              <Typography variant="body2" sx={{ flex: 1 }}>
+                Discarded
+              </Typography>
+              <Typography variant="body2" sx={{ color: theme.palette.error.main }}>
+                33
+              </Typography>
+            </Box>
+          </Box>
         </Grid>
       </Grid>
     </Box>
   );
 };
 
-export default SummaryCard;
+export default DashboardCard;

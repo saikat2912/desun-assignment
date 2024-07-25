@@ -1,15 +1,16 @@
 import React from 'react';
-import { FaBell } from 'react-icons/fa';  // Import a bell icon from react-icons
-import './style.css';  // Assuming you will add some CSS for the header
+import { FaBell } from 'react-icons/fa';  
+import './style.css';  
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 
 const Header = () => {
   return (
     <header className="header">
       
       <div className="header-right">
-        <FaBell className="icon bell-icon" />
+        <NotificationsNoneIcon className="icon bell-icon" />
         <div className="profile">
-          <img src="path-to-profile-image.jpg" alt="Profile" className="profile-pic" />
+          <img src="profile.png" alt="Profile" className="profile-pic" />
         </div>
       </div>
     </header>

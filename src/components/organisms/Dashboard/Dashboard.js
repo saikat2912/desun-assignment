@@ -12,7 +12,7 @@ export const Dashboard =()=>{
 
     return(
         <>
-        <div style={{ marginLeft: '250px', padding: '20px' ,width:'80vw'}}>
+        <div style={{ marginLeft: '250px', padding: '20px' ,width:'80vw'}} className="container">
         {/* Your main content goes here */}
         <div style={{float:'right'}}>
             <Header/>
