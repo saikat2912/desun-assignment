@@ -16,6 +16,8 @@ import {
   IconButton
 } from '@mui/material';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
+import AssignmentIcon from '@mui/icons-material/Assignment';
+import CloseIcon from '@mui/icons-material/Close';
 import { styled } from '@mui/system';
 
 
@@ -34,15 +36,16 @@ const DiscardForm = ({ open, onClose }) => {
   const [necropsyNeeded, setNecropsyNeeded] = React.useState('');
 
   const handleSubmit = () => {
-    // Handle form submission logic
+
     console.log({ selectedState, comments, necropsyNeeded });
     onClose();
   };
 
   return (
     <StyledDialog open={open} onClose={onClose} fullWidth maxWidth="sm">
-      <DialogTitle>Select State for Discard</DialogTitle>
+      <DialogTitle> <IconButton sx={{ marginTop: 0.25 }}><AssignmentIcon /></IconButton>Select State for Discard<IconButton sx={{ float: 'right' }} onClick={onClose}><CloseIcon /></IconButton></DialogTitle>
       <DialogContent>
+      <Box style={{ border: '1px solid #C3CEC7', }} sx={{ p: 1.5, borderRadius: 2 }}>
         <FormControl component="fieldset">
           <RadioGroup
             value={selectedState}
@@ -75,12 +78,11 @@ const DiscardForm = ({ open, onClose }) => {
             />
           </RadioGroup>
         </FormControl>
-        <Alert severity="warning" sx={{ mt: 2 }}>
-          This egg will be sent to "Discard"
-        </Alert>
+        </Box>
         <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
           Add Reason for Discard
         </Typography>
+        <Box style={{ border: '1px solid #C3CEC7', }} sx={{ p: 1.5, borderRadius: 2 }}>
         <TextField
           label="Enter Comments"
           variant="outlined"
@@ -105,9 +107,11 @@ const DiscardForm = ({ open, onClose }) => {
           </IconButton>
           <Typography>Drop your image here</Typography>
         </Box>
+        </Box>
         <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
           Necropsy Needed?
         </Typography>
+        <Box style={{ border: '1px solid #C3CEC7', }} sx={{ p: 1.5, borderRadius: 2 }}>
         <FormControl component="fieldset">
           <RadioGroup
             row
@@ -118,12 +122,11 @@ const DiscardForm = ({ open, onClose }) => {
             <FormControlLabel value="No" control={<Radio />} label="No" />
           </RadioGroup>
         </FormControl>
+        </Box>
       </DialogContent>
       <DialogActions>
-        <Button onClick={onClose} color="primary">
-          Cancel
-        </Button>
-        <Button onClick={handleSubmit} color="primary" variant="contained">
+        
+        <Button onClick={handleSubmit} color="primary" variant="contained" sx={{width:500}}>
           Submit
         </Button>
       </DialogActions>

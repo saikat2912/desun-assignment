@@ -1,13 +1,12 @@
-import Header from "../../molecules/header/Header";
+
 import './style.css';
 import DashboardHeader from "../../molecules/Dashboardheader/Header";
 import DashboardTable from "../../molecules/Table/Table";
 import StatCards from "../../molecules/StatCard/StatCard";
 import { Container, Box } from '@mui/material';
 import SummaryCard from "../../molecules/SummaryCard/SummaryCard";
-import PopUp from "../../molecules/PopUp/PopUp";
-import EggList from "../../molecules/EggList/EggList";
-import { Navigation } from "../../molecules/header/Header";
+import IncubationTable from '../../molecules/IncubationTable/IncubationTable';
+
 
 export const Dashboard = () => {
 
@@ -24,10 +23,8 @@ export const Dashboard = () => {
                             <SummaryCard />
                         </Box>
                     </Container>
-
                     <DashboardTable />
-
-
+                    
                 </div>
             </div>
         </>

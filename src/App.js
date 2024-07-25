@@ -20,6 +20,7 @@ const App = () => {
         < Navigation/>
         <div style={{ flex: 1, padding: '20px' }}>
           <Routes>
+          <Route path="/" element={<Dashboard/>} />
             <Route path="/dashboard" element={<Dashboard/>} />
           
             <Route path="/eggs" element={<EggList/>} />

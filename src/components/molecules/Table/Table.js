@@ -40,17 +40,7 @@ const StyledChip = styled(Chip)(({ theme, status }) => ({
     color: status === 'Completed' ? green[800] : status === 'In Progress' ? orange[800] : red[800],
 }));
 
-const rows = [
-    { eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234' },
-    { eggNumber: '0273 / 24', status: 'In Progress', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234' },
-    { eggNumber: '0273 / 24', status: 'Cancelled', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234' },
-    { eggNumber: '0273 / 24', status: 'In Progress', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234' },
-    { eggNumber: '0273 / 24', status: 'In Progress', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234' },
-    { eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234' },
-    { eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234' },
-    { eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234' },
-    { eggNumber: '0273 / 24', status: 'In Progress', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234' },
-];
+
 const DashboardTable = () => {
     const [fromDate, setFromDate] = React.useState(null);
     const [tilDate, setTilDate] = React.useState(null);
@@ -71,13 +61,26 @@ const DashboardTable = () => {
     };
     const rows = [
         { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-        // Add more rows as needed
+        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
+        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
+        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
+        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
+        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
+        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
+        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
+        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
+        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
+        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
+        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
+        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' }
+        
+
     ];
 
     const displayedRows = rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage);
 
     const handleSearch = () => {
-        // Implement search logic here
+        
         console.log(`Searching from ${fromDate} to ${tilDate} with query "${searchQuery}"`);
     };
 
@@ -119,7 +122,7 @@ const DashboardTable = () => {
                         onChange={(newValue) => setTilDate(newValue)}
                         renderInput={(params) => <TextField {...params} />}
                     />
-                    <FormControl>
+                    <FormControl sx={{minWidth:'165px'}}>
                         <InputLabel>From Site</InputLabel>
                         <Select
                             value={fromSite}
@@ -130,7 +133,7 @@ const DashboardTable = () => {
                             <MenuItem value="Site 2">Site 2</MenuItem>
                         </Select>
                     </FormControl>
-                    <FormControl>
+                    <FormControl sx={{minWidth:'165px'}}>
                         <InputLabel>Receiving Site</InputLabel>
                         <Select
                             value={receivingSite}

@@ -1,11 +1,12 @@
 import React from 'react';
 import { FaBell } from 'react-icons/fa';  
 import './style.css';  
-import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+
 
 import { AppBar, Toolbar, IconButton, Avatar, Box, Badge } from '@mui/material';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 
 export const Navigation = () => {
   return (
@@ -16,7 +17,7 @@ export const Navigation = () => {
         </Box>
        
           
-          <NotificationsNoneIcon className="icon bell-icon" />
+          <NotificationsNoneIcon className="icon bell-icon" color='action' sx={{height:50,width:30}} />
          
      
         <IconButton color="inherit">

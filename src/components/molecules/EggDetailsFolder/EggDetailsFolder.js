@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, Paper } from '@mui/material';
-import FolderIcon from '@mui/icons-material/Folder'; // You can use any icon you prefer
+import FolderIcon from '@mui/icons-material/Folder'; 
 
 const EggDetailsFolder = () => {
   return (

@@ -48,7 +48,7 @@ const AllocatedForm = ({ open, onClose }) => {
     const [weightUnit, setWeightUnit] = useState('Grams');
 
     const handleSubmit = () => {
-        // Handle form submission logic
+        
 
     };
 
@@ -211,10 +211,8 @@ const AllocatedForm = ({ open, onClose }) => {
                 </Box>
             </DialogContent>
             <DialogActions>
-                <Button onClick={onClose} color="primary">
-                    Cancel
-                </Button>
-                <Button onClick={handleSubmit} color="primary" variant="contained">
+                
+                <Button onClick={handleSubmit} color="primary" variant="contained" sx={{width:500}}>
                     Submit
                 </Button>
             </DialogActions>

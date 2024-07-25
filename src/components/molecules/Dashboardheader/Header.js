@@ -11,15 +11,14 @@ const DashboardHeader = () => {
   const [searchQuery, setSearchQuery] = React.useState('');
 
   const handleSearch = () => {
-    // Implement search logic here
-    console.log(`Searching from ${fromDate} to ${tilDate} with query "${searchQuery}"`);
+        
   };
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns} >
       <Box p={2} >
         <Typography variant="subtitle1" gutterBottom>
-          Egg Module / Dashboard
+        <span style={{color:'#BAC3BE'}}> Egg Module</span>  / Dashboard
         </Typography>
         <Typography variant="h6" gutterBottom>
           Current Stats
@@ -42,12 +41,12 @@ const DashboardHeader = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 variant="outlined"
-                size="small"
+                size="medium"
                 sx={{
-                  width: '200px',
+                  width: '300px',
                   '& .MuiInputBase-input': {
-                    padding: '8px 8px',
-                    fontSize: '0.875rem',
+                    padding: '18px 18px',
+                    fontSize: '1rem',
                     height: '1.5em',
                   },
                   '& .MuiInputLabel-root': {
