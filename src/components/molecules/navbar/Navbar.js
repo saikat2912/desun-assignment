@@ -28,6 +28,7 @@ const Navbar = () => {
       </div>
      {isCollapsed?
      <>
+     
        <ul className="nav-links">
 
        <li><Link to="/dashboard"><EggIcon/><span className='list-item'>D</span></Link></li>
@@ -48,6 +49,7 @@ const Navbar = () => {
      </>
      :
      <>
+     <p style={{marginLeft:'-90px',float:'left'}}><b>Egg Module</b></p>
      <ul className="nav-links">
 
         <li><Link to="/dashboard"><EggIcon/><span className='list-item'>Dashboard</span></Link></li>
@@ -58,8 +60,10 @@ const Navbar = () => {
         <li><Link to="/eggs"><EggIcon/><span className='list-item'>Eggs</span></Link></li>
       </ul>
 
+      
       <ul className="nav-links">
-        <li className="divider"></li>
+      
+        <li><p style={{marginLeft:'-90px',color:'white'}} ><b>Diet</b></p></li>
         <li><Link to="/ingredient"><EggIcon /><span className='list-item'>Ingredient</span></Link></li>
         <li><Link to="/recipe"><EggIcon/><span className='list-item'>Recipe</span></Link></li>
         <li><Link to="/diet"><EggIcon/><span className='list-item'>Diet</span></Link></li>

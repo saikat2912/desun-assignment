@@ -125,10 +125,11 @@ const DiscardForm = ({ open, onClose }) => {
         </Box>
       </DialogContent>
       <DialogActions>
-        
+      <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
         <Button onClick={handleSubmit} color="primary" variant="contained" sx={{width:500}}>
           Submit
         </Button>
+        </Box>
       </DialogActions>
     </StyledDialog>
   );
