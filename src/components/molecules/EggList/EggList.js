@@ -25,6 +25,12 @@ import { styled } from '@mui/system';
 import { Link } from 'react-router-dom';
 
 
+
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+    backgroundColor:'#C1D3D0' ,
+    color: '#44544A',
+    fontWeight: 'bold',
+  }));
 const eggData = [
     {
         no: 1,
@@ -36,7 +42,8 @@ const eggData = [
         status: 'Intact',
         collectedBy: 'Jordan Stevenson',
         designation: 'Designation',
-        avatarUrl: '/static/images/avatar/1.jpg'
+        avatarUrl: 'bird.jpg',
+        avatarPerson:'modi.jpg'
     },
     {
         no: 2,
@@ -48,7 +55,8 @@ const eggData = [
         status: 'Rotten',
         collectedBy: 'Jordan Stevenson',
         designation: 'Designation',
-        avatarUrl: '/static/images/avatar/1.jpg'
+        avatarUrl: 'bird.jpg',
+        avatarPerson:'modi.jpg'
     },
     // Add more data as needed
 ];
@@ -77,6 +85,7 @@ const EggList = () => {
 
     const [open, setOpen] = useState(false);
     const [discardopen, setDiscardOpen] = React.useState(false);
+    const [hoveredRow, setHoveredRow] = useState(null);
 
     const handleDiscardOpen = () => {
         setDiscardOpen(true);
@@ -98,16 +107,23 @@ const EggList = () => {
 
     }
     return (
-        <Box sx={{ p: 2 }} style={{ marginLeft: '250px', padding: '20px', width: '80vw' }}>
+        <>
+        <Box style={{ marginLeft: '250px', padding: '20px', width: '80vw' }} >
+        <Typography variant="subtitle1" gutterBottom>
+          Egg Module / Egg List
+        </Typography>
+        <Box sx={{ p: 2 ,
+            backgroundColor: '#fff',
+            borderRadius: 1,
+            padding: 2,
+            boxShadow: 1,
+          }}>
+
+
             <Typography variant="h6" gutterBottom>
                 Egg List
             </Typography>
-            <Tabs value={0}>
-                <Tab label="Received - 24" />
-                <Tab label="Incubation - 100" />
-                <Tab label="Hatched - 100" />
-                <Tab label="Discarded - 12" />
-            </Tabs>
+
             <Box display="flex" justifyContent="space-between" alignItems="center" my={2}>
                 <IconButton>
                     <FilterListIcon />
@@ -121,78 +137,96 @@ const EggList = () => {
                     }}
                 />
             </Box>
+            <Tabs value={0}>
+                <Tab label="Received - 24" />
+                <Tab label="Incubation - 100" />
+                <Tab label="Hatched - 100" />
+                <Tab label="Discarded - 12" />
+            </Tabs>
+           
             <TableContainer component={Paper}>
-                <Table aria-label="egg table">
-                    <TableHead>
-                        <TableRow>
-                            <TableCell>No</TableCell>
-                            <TableCell>Species</TableCell>
-                            <TableCell>Egg Number</TableCell>
-                            <TableCell>Site Name</TableCell>
-                            <TableCell>Collected On</TableCell>
-                            <TableCell>Batch No</TableCell>
-                            <TableCell>Status</TableCell>
-                            <TableCell>Actions</TableCell>
-                            <TableCell>Collected By</TableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {eggData.map((egg) => (
-                            <TableRow key={egg.no}>
-                                <TableCell>{egg.no}</TableCell>
-                                <TableCell>
-                                    <Box display="flex" alignItems="center">
-                                        <Avatar alt={egg.species} src={egg.avatarUrl} />
-                                        <Box ml={2}>
-                                            <Typography><Link to="/egglistdetails">{egg.species}</Link></Typography>
-                                            <Typography variant="body2" color="textSecondary">
-                                                Trichoglossus...
-                                            </Typography>
-                                        </Box>
-                                    </Box>
-                                </TableCell>
-                                <TableCell>{egg.eggNumber}</TableCell>
-                                <TableCell>{egg.siteName}</TableCell>
-                                <TableCell>{egg.collectedOn}</TableCell>
-                                <TableCell>{egg.batchNo}</TableCell>
-                                <TableCell>
-                                    <Typography
-                                        sx={{
-                                            backgroundColor: statusColors[egg.status],
-                                            borderRadius: 1,
-                                            padding: '2px 8px'
-                                        }}
-                                    >
-                                        {egg.status}
-                                    </Typography>
-                                </TableCell>
-                                <TableCell>
-                                    <Button variant="contained" color="success" size="small" onClick={handleClickOpen}>
-                                        Allocate
-                                    </Button>
-                                    <AllocatedForm open={open} onClose={handleClose}/>
-                                    <Button variant="contained" color="error" size="small" sx={{ ml: 1 }}  onClick={handleDiscardOpen}>
-                                        Discard
-                                    </Button>
-                                    <DiscardForm open={discardopen} onClose={handleDiscardClose} />
-                                </TableCell>
-                                <TableCell>
-                                    <Box display="flex" alignItems="center">
-                                        <Avatar alt={egg.collectedBy} src={egg.avatarUrl} />
-                                        <Box ml={2}>
-                                            <Typography>{egg.collectedBy}</Typography>
-                                            <Typography variant="body2" color="textSecondary">
-                                                {egg.designation}
-                                            </Typography>
-                                        </Box>
-                                    </Box>
-                                </TableCell>
-                            </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
-            </TableContainer>
+        <Table aria-label="egg table">
+          <TableHead>
+            <TableRow>
+              <StyledTableCell>No</StyledTableCell>
+              <StyledTableCell>Species</StyledTableCell>
+              <StyledTableCell>Egg Number</StyledTableCell>
+              <StyledTableCell>Site Name</StyledTableCell>
+              <StyledTableCell>Collected On</StyledTableCell>
+              <StyledTableCell>Batch No</StyledTableCell>
+              <StyledTableCell>Status</StyledTableCell>
+              <StyledTableCell>Collected By</StyledTableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {eggData.map((egg) => (
+              <TableRow
+                key={egg.no}
+                onMouseEnter={() => setHoveredRow(egg.no)}
+                onMouseLeave={() => setHoveredRow(null)}
+                sx={{ '&:hover': { backgroundColor: '#f5f5f5' } }}
+              >
+                <TableCell>{egg.no}</TableCell>
+                <TableCell>
+                  <Box display="flex" alignItems="center">
+                    <Avatar alt={egg.species} src={egg.avatarUrl} />
+                    <Box ml={2}>
+                      <Typography><Link to="/egglistdetails">{egg.species}</Link></Typography>
+                      <Typography variant="body2" color="textSecondary">
+                        Trichoglossus...
+                      </Typography>
+                    </Box>
+                  </Box>
+                </TableCell>
+                <TableCell>{egg.eggNumber}</TableCell>
+                <TableCell>{egg.siteName}</TableCell>
+                <TableCell>{egg.collectedOn}</TableCell>
+                <TableCell>{egg.batchNo}</TableCell>
+                <TableCell>
+                  <Typography
+                    sx={{
+                      backgroundColor: statusColors[egg.status],
+                      borderRadius: 1,
+                      padding: '2px 8px'
+                    }}
+                  >
+                    {egg.status}
+                  </Typography>
+                </TableCell>
+                <TableCell>
+                  {hoveredRow === egg.no ? (
+                    <Box display="flex" gap={1}>
+                      <Button variant="contained" color="success" size="small" onClick={handleClickOpen}>
+                        Allocate
+                      </Button>
+
+                      <AllocatedForm open={open} onClose={handleClose}/>
+                      <Button variant="contained" color="error" size="small"  onClick={handleDiscardOpen}>
+                        Discard
+                      </Button>
+                      <DiscardForm open={discardopen} onClose={handleDiscardClose} />
+                    </Box>
+                  ) : (
+                    <Box display="flex" alignItems="center">
+                      <Avatar alt={egg.collectedBy} src={egg.avatarPerson} />
+                      <Box ml={2}>
+                        <Typography>{egg.collectedBy}</Typography>
+                        <Typography variant="body2" color="textSecondary">
+                          {egg.designation}
+                        </Typography>
+                      </Box>
+                    </Box>
+                  )}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+
         </Box>
+        </Box>
+        </>
     );
 };
 

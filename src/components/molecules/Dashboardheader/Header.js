@@ -37,18 +37,31 @@ const DashboardHeader = () => {
             onChange={(newValue) => setTilDate(newValue)}
             renderInput={(params) => <TextField {...params} />}
           />
-          <TextField
-            label="Search"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            InputProps={{
-              endAdornment: (
-                <IconButton onClick={handleSearch}>
-                  <SearchIcon />
-                </IconButton>
-              ),
-            }}
-          />
+            <TextField
+                label="Search"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                variant="outlined"
+                size="small"
+                sx={{
+                  width: '200px',
+                  '& .MuiInputBase-input': {
+                    padding: '8px 8px',
+                    fontSize: '0.875rem',
+                    height: '1.5em',
+                  },
+                  '& .MuiInputLabel-root': {
+                    fontSize: '0.875rem',
+                  },
+                }}
+                InputProps={{
+                  endAdornment: (
+                    <IconButton onClick={handleSearch}>
+                      <SearchIcon />
+                    </IconButton>
+                  ),
+                }}
+              />
         </Box>
       </Box>
     </LocalizationProvider>

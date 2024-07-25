@@ -7,31 +7,29 @@ import { Container, Box } from '@mui/material';
 import SummaryCard from "../../molecules/SummaryCard/SummaryCard";
 import PopUp from "../../molecules/PopUp/PopUp";
 import EggList from "../../molecules/EggList/EggList";
+import { Navigation } from "../../molecules/header/Header";
 
-export const Dashboard =()=>{
+export const Dashboard = () => {
 
-    return(
+    return (
         <>
-        <div style={{ marginLeft: '250px', padding: '20px' ,width:'80vw'}} className="container">
-        {/* Your main content goes here */}
-        <div style={{float:'right'}}>
-            <Header/>
+            <div style={{ marginLeft: '250px', padding: '20px', width: '80vw' }} className="container">
+               
+                
+                <div className="dashboard-content" >
+                    <DashboardHeader />
+                    <StatCards />
+                    <Container>
+                        <Box my={4}>
+                            <SummaryCard />
+                        </Box>
+                    </Container>
 
-        </div>
-        <div className="dashboard-content" >
-            <DashboardHeader/>
-            <StatCards/>
-        <Container>
-      <Box my={4}>
-        <SummaryCard />
-      </Box>
-    </Container>
+                    <DashboardTable />
 
-        <DashboardTable/>
-        <PopUp/>
-       
-        </div>
-      </div>
-      </>
+
+                </div>
+            </div>
+        </>
     )
 }

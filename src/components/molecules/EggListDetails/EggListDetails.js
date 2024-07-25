@@ -1,7 +1,9 @@
 import React from 'react';
 import EggDetailHead from '../../atoms/EggDetailHead/EggDetailHead';
-import { Typography } from '@mui/material';
+import { Typography,Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
+import EggDetailsFolder from '../EggDetailsFolder/EggDetailsFolder';
+import EggDetailsHistory from '../EggDetailsHistory/EggDetailsHistory';
 
 const EggListDetails = () => {
   return (
@@ -21,7 +23,22 @@ const EggListDetails = () => {
       <Typography variant="body2" color="textPrimary">
         Egg Details
       </Typography>
-      <EggDetailHead />
+      <Grid container spacing={5}>
+        <Grid item xs={12} md={12} sm={12}>
+        <EggDetailHead />
+        </Grid>
+        <Grid item xs={2} md={2} sm={2}>
+        
+        </Grid>
+        <Grid item xs={4} md={4} sm={4}>
+        <EggDetailsFolder/>
+        </Grid>
+        <Grid item xs={6} md={6} sm={6}>
+        <EggDetailsHistory/>
+        </Grid>
+      </Grid>
+      
+     
     </div>
   );
 };
