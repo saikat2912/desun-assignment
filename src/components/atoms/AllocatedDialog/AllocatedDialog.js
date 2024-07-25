@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     Avatar,
     Box,
@@ -13,11 +13,14 @@ import {
     TableRow,
     Tabs,
     Tab,
-  
+
     Typography, Dialog, DialogTitle, DialogContent, DialogActions, TextField, Select, MenuItem, FormControl, InputLabel, Grid
 } from '@mui/material';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import { styled } from '@mui/system';
+import { Padding } from '@mui/icons-material';
+import AssignmentIcon from '@mui/icons-material/Assignment';
+import CloseIcon from '@mui/icons-material/Close';
 
 
 const StyledDialog = styled(Dialog)(({ theme }) => ({
@@ -26,6 +29,7 @@ const StyledDialog = styled(Dialog)(({ theme }) => ({
         top: theme.spacing(2),
         right: theme.spacing(2),
         margin: 0,
+
     },
 }));
 
@@ -36,104 +40,186 @@ const AllocatedForm = ({ open, onClose }) => {
     const [room, setRoom] = React.useState('');
     const [incubator, setIncubator] = React.useState('');
 
-  const handleSubmit = () => {
-    // Handle form submission logic
-  
-  };
+    const [length, setLength] = useState('');
+    const [lengthUnit, setLengthUnit] = useState('MM');
+    const [width, setWidth] = useState('');
+    const [widthUnit, setWidthUnit] = useState('MM');
+    const [weight, setWeight] = useState('');
+    const [weightUnit, setWeightUnit] = useState('Grams');
 
-  return (
-    <StyledDialog
-    open={open}
-    onClose={onClose}
-    fullWidth
-    maxWidth="sm"
->
-    <DialogTitle>Send for Incubation</DialogTitle>
-    <DialogContent>
-        <FormControl fullWidth margin="normal">
-            <InputLabel>Current State</InputLabel>
-            <Select
-                value={currentState}
-                onChange={(e) => setCurrentState(e.target.value)}
-            >
-                <MenuItem value="Intact">Intact</MenuItem>
-                <MenuItem value="Cracked">Cracked</MenuItem>
-                <MenuItem value="Broken">Broken</MenuItem>
-            </Select>
-        </FormControl>
-        <FormControl fullWidth margin="normal">
-            <InputLabel>Condition</InputLabel>
-            <Select
-                value={condition}
-                onChange={(e) => setCondition(e.target.value)}
-            >
-                <MenuItem value="Warm">Warm</MenuItem>
-                <MenuItem value="Cool">Cool</MenuItem>
-                <MenuItem value="Room Temperature">Room Temperature</MenuItem>
-            </Select>
-        </FormControl>
-        <Typography variant="h6" gutterBottom>
-            Incubator Selection
-        </Typography>
-        <FormControl fullWidth margin="normal">
-            <InputLabel>Select Nursery</InputLabel>
-            <Select
-                value={nursery}
-                onChange={(e) => setNursery(e.target.value)}
-            >
-                <MenuItem value="Nursery1">Nursery Name 1</MenuItem>
-                <MenuItem value="Nursery2">Nursery Name 2</MenuItem>
-            </Select>
-        </FormControl>
-        <FormControl fullWidth margin="normal">
-            <InputLabel>Select Room</InputLabel>
-            <Select
-                value={room}
-                onChange={(e) => setRoom(e.target.value)}
-            >
-                <MenuItem value="Room1">Room 1</MenuItem>
-                <MenuItem value="Room2">Room 2</MenuItem>
-            </Select>
-        </FormControl>
-        <FormControl fullWidth margin="normal">
-            <InputLabel>Select Incubator</InputLabel>
-            <Select
-                value={incubator}
-                onChange={(e) => setIncubator(e.target.value)}
-            >
-                <MenuItem value="Incubator1">Incubator 1</MenuItem>
-                <MenuItem value="Incubator2">Incubator 2</MenuItem>
-            </Select>
-        </FormControl>
-        <Typography variant="h6" gutterBottom>
-            Egg Measurements
-        </Typography>
-        <Box display="flex" justifyContent="space-between" alignItems="center" marginBottom={2}>
-            <TextField
-                label="Weight"
-                variant="outlined"
-                margin="normal"
-                type="number"
-                style={{ flex: 1, marginRight: '8px' }}
-            />
-            <TextField
-                label="Unit"
-                variant="outlined"
-                margin="normal"
-                style={{ flex: 1, marginLeft: '8px' }}
-            />
-        </Box>
-    </DialogContent>
-    <DialogActions>
-        <Button onClick={onClose} color="primary">
-            Cancel
-        </Button>
-        <Button onClick={handleSubmit} color="primary" variant="contained">
-            Submit
-        </Button>
-    </DialogActions>
-</StyledDialog>
-  );
+    const handleSubmit = () => {
+        // Handle form submission logic
+
+    };
+
+    return (
+        <StyledDialog
+            open={open}
+            onClose={onClose}
+            fullWidth
+            maxWidth="sm"
+
+        >
+            <DialogTitle><IconButton sx={{ marginTop: 0.25 }}><AssignmentIcon /></IconButton>Send for Incubation <IconButton sx={{ float: 'right' }} onClick={onClose}><CloseIcon /></IconButton></DialogTitle>
+            <DialogContent>
+                <Box component="form" noValidate autoComplete="off" sx={{ mt: 2 }}>
+                    <Box style={{ border: '1px solid #C3CEC7', }} sx={{ p: 1.5, borderRadius: 2 }}>
+                        <FormControl fullWidth margin="normal">
+                            <InputLabel>Current State</InputLabel>
+                            <Select
+                                value={currentState}
+                                onChange={(e) => setCurrentState(e.target.value)}
+                                label="Current State"
+                            >
+                                <MenuItem value="Intact">Intact</MenuItem>
+                                <MenuItem value="Cracked">Cracked</MenuItem>
+                                <MenuItem value="Broken">Broken</MenuItem>
+                            </Select>
+                        </FormControl>
+                        <FormControl fullWidth margin="normal">
+                            <InputLabel>Condition</InputLabel>
+                            <Select
+                                value={condition}
+                                onChange={(e) => setCondition(e.target.value)}
+                                label="Condition"
+                            >
+                                <MenuItem value="Warm">Warm</MenuItem>
+                                <MenuItem value="Cold">Cold</MenuItem>
+                            </Select>
+                        </FormControl>
+                    </Box>
+                    <Typography variant="h6" sx={{ mt: 2 }}>
+                        Incubator Selection
+                    </Typography>
+                    <Box style={{ border: '1px solid #C3CEC7', }} sx={{ p: 1.5, borderRadius: 2 }}>
+                        <FormControl fullWidth margin="normal">
+                            <InputLabel>Select Nursery</InputLabel>
+                            <Select
+                                value={nursery}
+                                onChange={(e) => setNursery(e.target.value)}
+                                label="Select Nursery"
+                            >
+                                <MenuItem value="Nursery 1">Nursery 1</MenuItem>
+                                <MenuItem value="Nursery 2">Nursery 2</MenuItem>
+                            </Select>
+                        </FormControl>
+                        <FormControl fullWidth margin="normal">
+                            <InputLabel>Select Room</InputLabel>
+                            <Select
+                                value={room}
+                                onChange={(e) => setRoom(e.target.value)}
+                                label="Select Room"
+                            >
+                                <MenuItem value="Room 1">Room 1</MenuItem>
+                                <MenuItem value="Room 2">Room 2</MenuItem>
+                            </Select>
+                        </FormControl>
+                        <FormControl fullWidth margin="normal">
+                            <InputLabel>Select Incubator</InputLabel>
+                            <Select
+                                value={incubator}
+                                onChange={(e) => setIncubator(e.target.value)}
+                                label="Select Incubator"
+                            >
+                                <MenuItem value="Incubator 1">Incubator 1</MenuItem>
+                                <MenuItem value="Incubator 2">Incubator 2</MenuItem>
+                            </Select>
+                        </FormControl>
+                    </Box>
+                    <Box sx={{ mt: 2, mb: 2 }}>
+                        <Box display="flex" justifyContent="space-between" alignItems="center">
+                            <Typography variant="h6">Egg Measurements</Typography>
+                            <Button sx={{ textTransform: 'none' }}>Get Values</Button>
+                        </Box>
+                        <Box style={{ border: '1px solid #C3CEC7', }} sx={{ p: 1.5, borderRadius: 2 }}>
+                            <Grid container spacing={2}>
+                                <Grid item xs={6}>
+                                    <FormControl fullWidth margin="normal">
+                                        <TextField
+                                            label="Size Length (Number)"
+                                            variant="outlined"
+                                            value={length}
+                                            onChange={(e) => setLength(e.target.value)}
+                                        />
+                                    </FormControl>
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <FormControl fullWidth margin="normal">
+                                        <InputLabel>Unit</InputLabel>
+                                        <Select
+                                            value={lengthUnit}
+                                            onChange={(e) => setLengthUnit(e.target.value)}
+                                            label="Unit"
+                                        >
+                                            <MenuItem value="MM">MM</MenuItem>
+                                            <MenuItem value="CM">CM</MenuItem>
+                                            <MenuItem value="Inches">Inches</MenuItem>
+                                        </Select>
+                                    </FormControl>
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <FormControl fullWidth margin="normal">
+                                        <TextField
+                                            label="Size Width (Number)"
+                                            variant="outlined"
+                                            value={width}
+                                            onChange={(e) => setWidth(e.target.value)}
+                                        />
+                                    </FormControl>
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <FormControl fullWidth margin="normal">
+                                        <InputLabel>Unit</InputLabel>
+                                        <Select
+                                            value={widthUnit}
+                                            onChange={(e) => setWidthUnit(e.target.value)}
+                                            label="Unit"
+                                        >
+                                            <MenuItem value="MM">MM</MenuItem>
+                                            <MenuItem value="CM">CM</MenuItem>
+                                            <MenuItem value="Inches">Inches</MenuItem>
+                                        </Select>
+                                    </FormControl>
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <FormControl fullWidth margin="normal">
+                                        <TextField
+                                            label="Weight (Number)"
+                                            variant="outlined"
+                                            value={weight}
+                                            onChange={(e) => setWeight(e.target.value)}
+                                        />
+                                    </FormControl>
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <FormControl fullWidth margin="normal">
+                                        <InputLabel>Unit</InputLabel>
+                                        <Select
+                                            value={weightUnit}
+                                            onChange={(e) => setWeightUnit(e.target.value)}
+                                            label="Unit"
+                                        >
+                                            <MenuItem value="Grams">Grams</MenuItem>
+                                            <MenuItem value="Kilograms">Kilograms</MenuItem>
+                                            <MenuItem value="Pounds">Pounds</MenuItem>
+                                        </Select>
+                                    </FormControl>
+                                </Grid>
+                            </Grid>
+                        </Box>
+                    </Box>
+                </Box>
+            </DialogContent>
+            <DialogActions>
+                <Button onClick={onClose} color="primary">
+                    Cancel
+                </Button>
+                <Button onClick={handleSubmit} color="primary" variant="contained">
+                    Submit
+                </Button>
+            </DialogActions>
+        </StyledDialog>
+    );
 };
 
 export default AllocatedForm;

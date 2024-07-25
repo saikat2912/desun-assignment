@@ -13,7 +13,7 @@ const EggDetailsFolder = () => {
         justifyContent: 'center',
         padding: 4,
         textAlign: 'center',
-        height: 200, // Adjust height as needed
+        height: 355, 
         borderRadius: 2,
       }}
     >

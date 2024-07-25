@@ -8,15 +8,13 @@ import { CardActionArea } from '@mui/material';
 export default function EggDetailCard() {
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+      
         <CardMedia
           component="img"
-          height="300"
-          image="parrot.jpg"
+          height="200"
+          image="card_details/parrot.jpg"
           alt="green iguana"
         />
-      
-      </CardActionArea>
     </Card>
   );
 }

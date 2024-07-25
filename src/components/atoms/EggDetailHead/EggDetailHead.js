@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {
     Box,
     Button,
@@ -11,15 +11,36 @@ import {
     Divider,
 } from '@mui/material';
 import EggDetailCard from '../EggDetailCard/EggDetailCard';
+import AllocatedForm from '../AllocatedDialog/AllocatedDialog';
+import DiscardForm from '../DiscardDialog/DiscardDialog';
 
 const EggDetailHead = () => {
+    const [open, setOpen] = useState(false);
+    const [discardopen, setDiscardOpen] = React.useState(false);
+    
+
+    const handleDiscardOpen = () => {
+        setDiscardOpen(true);
+    };
+  
+    const handleDiscardClose = () => {
+        setDiscardOpen(false);
+    };
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
     return (
      
             <Grid container spacing={2} sx={{ backgroundColor: '#fff', padding: 2, borderRadius: 1 }} style={{ marginLeft: '250px', padding: '20px', width: '80vw' }}>
                 <Grid item xs={3} sm={3} md={3}>
                      <EggDetailCard/>
                 </Grid>
-                <Grid item xs={9} sm={9} md={9}>
+                <Grid item xs={9} sm={9} md={9} style={{marginTop:'40px'}}>
                     <Grid container>
                         <Grid item xs={12} sm={12} md={12}>
                             <Grid container>
@@ -44,12 +65,16 @@ const EggDetailHead = () => {
                                                 </Grid>
                                             </Grid>
                                         </Grid>
-                                        <Grid item xs={3} md={3} sm={3}> <Button variant="outlined" color="error" sx={{ mr: 1 }}>
+                                        <Grid item xs={3} md={3} sm={3}> <Button variant="outlined" color="error" sx={{ mr: 1 }} onClick={handleDiscardOpen}>
                                             Discard
-                                        </Button></Grid>
-                                        <Grid item xs={3} md={3} sm={3}> <Button variant="contained" color="success">
+                                        </Button>
+                                        <DiscardForm open={discardopen} onClose={handleDiscardClose} />
+                                        </Grid>
+                                        <Grid item xs={3} md={3} sm={3}> <Button variant="contained" color="success" onClick={handleClickOpen}>
                                             Allocate
-                                        </Button></Grid>
+                                        </Button>
+                                        <AllocatedForm open={open} onClose={handleClose}/>
+                                        </Grid>
 
                                     </Grid>
                                 </Grid>

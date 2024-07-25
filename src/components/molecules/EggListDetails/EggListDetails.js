@@ -1,6 +1,6 @@
 import React from 'react';
 import EggDetailHead from '../../atoms/EggDetailHead/EggDetailHead';
-import { Typography,Grid } from '@mui/material';
+import { Typography,Grid,Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 import EggDetailsFolder from '../EggDetailsFolder/EggDetailsFolder';
 import EggDetailsHistory from '../EggDetailsHistory/EggDetailsHistory';
@@ -8,21 +8,14 @@ import EggDetailsHistory from '../EggDetailsHistory/EggDetailsHistory';
 const EggListDetails = () => {
   return (
     <div style={{backgroundColor:'#EFF5F2'}}>
-        <Typography variant="body2" >
-        Egg Module
-      </Typography>
-      <Typography variant="body2" color="textSecondary" sx={{ mx: 1 }}>
-        /
-      </Typography>
-      <Link to="#" underline="hover" color="textSecondary" variant="body2">
-        Egg List
-      </Link>
-      <Typography variant="body2" color="textSecondary" sx={{ mx: 1 }}>
-        /
-      </Typography>
-      <Typography variant="body2" color="textPrimary">
-        Egg Details
-      </Typography>
+         <Box p={2} >
+        <Typography variant="subtitle1" gutterBottom style={{marginLeft:250}}>
+         <span style={{color:'#BAC3BE'}}>Egg Module / Egg List </span>  / Egg Details
+        </Typography>
+       
+      <Grid container>
+        <Typography style={{fontSize:20,color:'black'}}>hello</Typography>
+      </Grid>
       <Grid container spacing={5}>
         <Grid item xs={12} md={12} sm={12}>
         <EggDetailHead />
@@ -37,7 +30,7 @@ const EggListDetails = () => {
         <EggDetailsHistory/>
         </Grid>
       </Grid>
-      
+      </Box>
      
     </div>
   );
