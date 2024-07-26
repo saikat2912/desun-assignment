@@ -20,9 +20,9 @@ const Navbar = () => {
       
     
       <IconButton color="inherit" className="toggle-button" onClick={toggleNavbar}>
-       
-        {isCollapsed ? '☰' :<><img src={logo} alt="Logo" className="logo" />  <KeyboardDoubleArrowLeftIcon /></>}
-      </IconButton>
+          {isCollapsed ? '☰': <><img src={logo} alt="Logo" className="logo" /> <KeyboardDoubleArrowLeftIcon /></>}
+        </IconButton>
+
    
        
        
