@@ -13,12 +13,10 @@ export const Navigation = () => {
     <AppBar position="static" sx={{ backgroundColor: '#EFF5F2', boxShadow: 'none' }}>
       <Toolbar>
         <Box sx={{ flexGrow: 1 }}>
-          {/* Placeholder for other toolbar content */}
-        </Box>
-       
-          
-          <NotificationsNoneIcon className="icon bell-icon" color='action' sx={{height:50,width:30}} />
          
+        </Box>
+          <NotificationsNoneIcon className="icon bell-icon" color='action' sx={{height:50,width:30}} />
+
      
         <IconButton color="inherit">
           

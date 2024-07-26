@@ -8,10 +8,12 @@ import { Dashboard } from './components/organisms/Dashboard/Dashboard';
 import EggListDetails from './components/molecules/EggListDetails/EggListDetails';
 import { Navigation } from './components/molecules/header/Header';
 const App = () => {
+
+  const basename = process.env.NODE_ENV === 'development' ? '/' : '/desun-assignment';
   return (
    
 
-    <Router>
+    <Router basename={basename}>
       <Box sx={{ display: 'flex' }}>
       <Box sx={{ width: 240, backgroundColor: '#1F515B', height: '100vh' }}>
         <Navbar />
