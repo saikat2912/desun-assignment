@@ -1,3 +1,6 @@
+import bird from ".././img/bird.jpg";
+import modi from '../img/modi.jpg';
+
 // export const dashboard_stats={
 //     total_eggs:3768,
 //     total_species:198,
@@ -78,19 +81,19 @@
 
 
 export const dashboard_rows = [
-    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' }
+    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl:bird },
+    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: bird },
+    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: bird },
+    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: bird },
+    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: bird },
+    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: bird },
+    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: bird },
+    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: bird },
+    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: bird },
+    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: bird },
+    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: bird },
+    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: bird },
+    { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: bird }
     
 
 ];
@@ -115,7 +118,7 @@ export const incubationData = [
       enclosure: '24 D',
       collectedOn: '1 Mar 2024',
       collectedBy: 'Jordan Stevenson',
-      avatarPerson: 'modi.jpg',
+      avatarPerson: modi,
       designation: 'Designation'
     },
     {
@@ -136,7 +139,7 @@ export const incubationData = [
       enclosure: '24 D',
       collectedOn: '1 Mar 2024',
       collectedBy: 'Jordan Stevenson',
-      avatarPerson: 'modi.jpg',
+      avatarPerson: modi,
       designation: 'Designation'
     },
     {
@@ -157,7 +160,7 @@ export const incubationData = [
       enclosure: '24 D',
       collectedOn: '1 Mar 2024',
       collectedBy: 'Jordan Stevenson',
-      avatarPerson: 'modi.jpg',
+      avatarPerson: modi,
       designation: 'Designation'
     },
     {
@@ -178,7 +181,7 @@ export const incubationData = [
       enclosure: '24 D',
       collectedOn: '1 Mar 2024',
       collectedBy: 'Jordan Stevenson',
-      avatarPerson: 'modi.jpg',
+      avatarPerson: modi,
       designation: 'Designation'
     },
     {
@@ -199,7 +202,7 @@ export const incubationData = [
       enclosure: '24 D',
       collectedOn: '1 Mar 2024',
       collectedBy: 'Jordan Stevenson',
-      avatarPerson: 'modi.jpg',
+      avatarPerson: modi,
       designation: 'Designation'
     },
     {
@@ -220,7 +223,7 @@ export const incubationData = [
       enclosure: '24 D',
       collectedOn: '1 Mar 2024',
       collectedBy: 'Jordan Stevenson',
-      avatarPerson: 'modi.jpg',
+      avatarPerson: modi,
       designation: 'Designation'
     },
     {
@@ -241,7 +244,7 @@ export const incubationData = [
       enclosure: '24 D',
       collectedOn: '1 Mar 2024',
       collectedBy: 'Jordan Stevenson',
-      avatarPerson: 'modi.jpg',
+      avatarPerson: modi,
       designation: 'Designation'
     },
     {
@@ -262,7 +265,7 @@ export const incubationData = [
       enclosure: '24 D',
       collectedOn: '1 Mar 2024',
       collectedBy: 'Jordan Stevenson',
-      avatarPerson: 'modi.jpg',
+      avatarPerson: modi,
       designation: 'Designation'
     },
     {
@@ -283,7 +286,7 @@ export const incubationData = [
       enclosure: '24 D',
       collectedOn: '1 Mar 2024',
       collectedBy: 'Jordan Stevenson',
-      avatarPerson: `${process.env.PUBLIC_URL}/modi.jpg`,
+      avatarPerson: modi,
       designation: 'Designation'
     },
     {
@@ -304,7 +307,7 @@ export const incubationData = [
       enclosure: '24 D',
       collectedOn: '1 Mar 2024',
       collectedBy: 'Jordan Stevenson',
-      avatarPerson: `${process.env.PUBLIC_URL}/modi.jpg`,
+      avatarPerson: modi,
       designation: 'Designation'
     }
   ];
@@ -320,8 +323,8 @@ export const incubationData = [
       status: 'Intact',
       collectedBy: 'Jordan Stevenson',
       designation: 'Designation',
-      avatarUrl: `${process.env.PUBLIC_URL}/bird.jpg`,
-      avatarPerson: 'modi.jpg',
+      avatarUrl:bird,
+      avatarPerson: modi,
     },
     {
       no: 2,
@@ -333,8 +336,8 @@ export const incubationData = [
       status: 'Rotten',
       collectedBy: 'Jordan Stevenson',
       designation: 'Designation',
-      avatarUrl: 'bird.jpg',
-      avatarPerson: 'modi.jpg',
+      avatarUrl: bird,
+      avatarPerson: modi,
     },
     {
       no: 3,
@@ -346,8 +349,8 @@ export const incubationData = [
       status: 'Rotten',
       collectedBy: 'Jordan Stevenson',
       designation: 'Designation',
-      avatarUrl: 'bird.jpg',
-      avatarPerson: 'modi.jpg',
+      avatarUrl: bird,
+      avatarPerson: modi,
     },
     {
       no: 4,
@@ -359,8 +362,8 @@ export const incubationData = [
       status: 'Rotten',
       collectedBy: 'Jordan Stevenson',
       designation: 'Designation',
-      avatarUrl: 'bird.jpg',
-      avatarPerson: 'modi.jpg',
+      avatarUrl: bird,
+      avatarPerson: modi,
     },
   
     {
@@ -373,8 +376,8 @@ export const incubationData = [
       status: 'Rotten',
       collectedBy: 'Jordan Stevenson',
       designation: 'Designation',
-      avatarUrl: 'bird.jpg',
-      avatarPerson: 'modi.jpg',
+      avatarUrl:bird,
+      avatarPerson: modi,
     },
     {
       no: 6,
@@ -386,8 +389,8 @@ export const incubationData = [
       status: 'Rotten',
       collectedBy: 'Jordan Stevenson',
       designation: 'Designation',
-      avatarUrl: 'bird.jpg',
-      avatarPerson: 'modi.jpg',
+      avatarUrl: bird,
+      avatarPerson: modi,
     },
     {
       no: 7,
@@ -399,8 +402,8 @@ export const incubationData = [
       status: 'Rotten',
       collectedBy: 'Jordan Stevenson',
       designation: 'Designation',
-      avatarUrl: 'bird.jpg',
-      avatarPerson: 'modi.jpg',
+      avatarUrl: bird,
+      avatarPerson: modi,
     },
     {
       no: 8,
@@ -412,7 +415,7 @@ export const incubationData = [
       status: 'Rotten',
       collectedBy: 'Jordan Stevenson',
       designation: 'Designation',
-      avatarUrl: 'bird.jpg',
-      avatarPerson: 'modi.jpg',
+      avatarUrl: bird,
+      avatarPerson: modi,
     }
   ];
