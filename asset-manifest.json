@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/desun-assignment/static/css/main.faa554ff.css",
-    "main.js": "/desun-assignment/static/js/main.18c1f746.js",
+    "main.js": "/desun-assignment/static/js/main.ed356b35.js",
     "static/js/453.3f0a577a.chunk.js": "/desun-assignment/static/js/453.3f0a577a.chunk.js",
-    "static/media/parrot.jpg": "/desun-assignment/static/media/parrot.c887733ca952bda27e2d.jpg",
+    "static/media/parrot.jpg": "/desun-assignment/static/media/parrot.46a686308f0f81d4f6f0.jpg",
     "static/media/modi.jpg": "/desun-assignment/static/media/modi.213bb135fb5a0ff4cbdc.jpg",
     "static/media/bird.jpg": "/desun-assignment/static/media/bird.7cf03b5d6f0681e94636.jpg",
     "static/media/logo.png": "/desun-assignment/static/media/logo.e0089b97bd1a4c8666dd.png",
@@ -11,11 +11,11 @@
     "static/media/logo.svg": "/desun-assignment/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/desun-assignment/index.html",
     "main.faa554ff.css.map": "/desun-assignment/static/css/main.faa554ff.css.map",
-    "main.18c1f746.js.map": "/desun-assignment/static/js/main.18c1f746.js.map",
+    "main.ed356b35.js.map": "/desun-assignment/static/js/main.ed356b35.js.map",
     "453.3f0a577a.chunk.js.map": "/desun-assignment/static/js/453.3f0a577a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.faa554ff.css",
-    "static/js/main.18c1f746.js"
+    "static/js/main.ed356b35.js"
   ]
 }
