@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-import parrot from "../../../img/parrot.jpg"
+import parrot from "../../../img/card_details/parrot.jpg"
 
 export default function EggDetailCard() {
   return (
@@ -13,7 +13,7 @@ export default function EggDetailCard() {
         <CardMedia
           component="img"
           height="200"
-          image="card_details/parrot.jpg"
+          image={parrot}
           alt="parrot"
         />
     </Card>

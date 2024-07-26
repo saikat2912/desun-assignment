@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Routes,Navigate } from 'react-router-dom';
 import Navbar from './components/molecules/navbar/Navbar';
 import { Container, Box } from '@mui/material';
 import EggList from './components/molecules/EggList/EggList';
@@ -20,7 +20,7 @@ const App = () => {
         < Navigation/>
         <div style={{ flex: 1, padding: '20px' }}>
           <Routes>
-          <Route path="/" element={<Dashboard/>} />
+          <Route path="/" element={<Navigate to="/dashboard" />} />
             <Route path="/dashboard" element={<Dashboard/>} />
           
             <Route path="/eggs" element={<EggList/>} />
