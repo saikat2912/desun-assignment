@@ -283,7 +283,7 @@ export const incubationData = [
       enclosure: '24 D',
       collectedOn: '1 Mar 2024',
       collectedBy: 'Jordan Stevenson',
-      avatarPerson: 'modi.jpg',
+      avatarPerson: `${process.env.PUBLIC_URL}/modi.jpg`,
       designation: 'Designation'
     },
     {
@@ -304,7 +304,7 @@ export const incubationData = [
       enclosure: '24 D',
       collectedOn: '1 Mar 2024',
       collectedBy: 'Jordan Stevenson',
-      avatarPerson: 'modi.jpg',
+      avatarPerson: `${process.env.PUBLIC_URL}/modi.jpg`,
       designation: 'Designation'
     }
   ];
@@ -320,7 +320,7 @@ export const incubationData = [
       status: 'Intact',
       collectedBy: 'Jordan Stevenson',
       designation: 'Designation',
-      avatarUrl: 'bird.jpg',
+      avatarUrl: `${process.env.PUBLIC_URL}/bird.jpg`,
       avatarPerson: 'modi.jpg',
     },
     {
