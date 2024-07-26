@@ -13,6 +13,10 @@ import {
 import EggDetailCard from '../EggDetailCard/EggDetailCard';
 import AllocatedForm from '../AllocatedDialog/AllocatedDialog';
 import DiscardForm from '../DiscardDialog/DiscardDialog';
+import modi from "../../../img/modi.jpg"
+import img1 from "../../../img/card_details/img1.png"
+import img2 from "../../../img/card_details/img1.png"
+import img3 from "../../../img/card_details/img1.png"
 
 const EggDetailHead = () => {
     const [open, setOpen] = useState(false);
@@ -55,7 +59,7 @@ const EggDetailHead = () => {
                                         <Grid item xs={6} md={6} sm={6}>
                                             <Grid container>
                                                 <Grid item xs={3} md={3} sm={3}>
-                                                <Avatar src="modi.jpg" alt="Jordan Stevenson" sx={{ width: 40, height: 40, marginBottom: 1 }} />
+                                                <Avatar src={modi} alt="Jordan Stevenson" sx={{ width: 40, height: 40, marginBottom: 1 }} />
                                                 </Grid>
                                                 <Grid item xs={9} sm={9} md={9}>
                                                 <Typography variant="body2">Jordan Stevenson</Typography>
@@ -92,7 +96,7 @@ const EggDetailHead = () => {
                                     padding: 2,
                                 }}
                             >
-                                <Avatar src="/card_details/img1.png" alt="Weight Icon" sx={{ marginRight: 2 }} />
+                                <Avatar src={img1} alt="Weight Icon" sx={{ marginRight: 2 }} />
                                 <Box>
                                     <Typography variant="h6">Not Added</Typography>
                                     <Typography variant="body2" color="textSecondary">
@@ -110,7 +114,7 @@ const EggDetailHead = () => {
                                         padding: 2,
                                     }}
                                 >
-                                    <Avatar src="/card_details/img2.png" alt="Condition Icon" sx={{ marginRight: 2 }} />
+                                    <Avatar src={img2} alt="Condition Icon" sx={{ marginRight: 2 }} />
                                     <Box>
                                         <Typography variant="h6">Intact</Typography>
                                         <Typography variant="body2" color="textSecondary">
@@ -128,7 +132,7 @@ const EggDetailHead = () => {
                                     padding: 2,
                                 }}
                             >
-                                <Avatar src="/card_details/img3.png" alt="Condition Icon" sx={{ marginRight: 2 }} />
+                                <Avatar src={img3} alt="Condition Icon" sx={{ marginRight: 2 }} />
                                 <Box>
                                     <Typography variant="h6">Intact</Typography>
                                     <Typography variant="body2" color="textSecondary">

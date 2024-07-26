@@ -1,6 +1,9 @@
 import React from 'react';
 import { Box, Typography, Paper, Divider, IconButton, Grid, Avatar } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
+import weight from "../../../img/card_details/weight.jpg";
+import length from "../../../img/card_details/length.png";
+import width from "../../../img/card_details/width.png";
 
 const EggDetailsHistory = () => {
     return (
@@ -125,7 +128,7 @@ const EggDetailsHistory = () => {
                     <Grid item xs={4}>
                         <Box textAlign="center">
                             <Grid container>
-                                <Grid item xs={2}>    <Avatar src="/card_details/length.png" alt="Condition Icon" sx={{ marginRight: 2 }} /></Grid>
+                                <Grid item xs={2}>    <Avatar src={length} alt="Condition Icon" sx={{ marginRight: 2 }} /></Grid>
                                 <Grid item xs={5}><Grid container>
                                     <Grid item xs={12} sm={12}>
                                         <Typography variant="body2">Not Added</Typography>
@@ -142,7 +145,7 @@ const EggDetailsHistory = () => {
                     <Grid item xs={4}>
                         <Box textAlign="center">
                             <Grid container>
-                                <Grid item xs={2}>    <Avatar src="/card_details/width.png" alt="Condition Icon" sx={{ marginRight: 2 }} /></Grid>
+                                <Grid item xs={2}>    <Avatar src={width} alt="Condition Icon" sx={{ marginRight: 2 }} /></Grid>
                                 <Grid item xs={5}><Grid container>
                                     <Grid item xs={12} sm={12}>
                                         <Typography variant="body2">Not Added</Typography>
@@ -160,7 +163,7 @@ const EggDetailsHistory = () => {
                     <Grid item xs={4}>
                         <Box textAlign="center">
                             <Grid container>
-                                <Grid item xs={2}>   <Avatar src="/card_details/weight.jpg" alt="Condition Icon" sx={{ marginRight: 2 }} /></Grid>
+                                <Grid item xs={2}>   <Avatar src={weight} alt="Condition Icon" sx={{ marginRight: 2 }} /></Grid>
                                 <Grid item xs={5}><Grid container>
                                     <Grid item xs={12} sm={12}>
                                         <Typography variant="body2">Not Added</Typography>

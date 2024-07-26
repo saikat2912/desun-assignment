@@ -16,6 +16,8 @@ import {
 import { styled } from '@mui/system';
 import { green } from '@mui/material/colors';
 import { incubationData } from '../../../util/datas';
+import eggimg from '../../../img/egg.jpg';
+import bird from '../../../img/bird.jpg';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   backgroundColor: '#C1D3D0',
@@ -104,7 +106,7 @@ const IncubationComponent = () => {
                     }}
                   >
                     <Box display="flex" alignItems="center">
-                      <Avatar alt={egg.species} src='egg.jpg' />
+                      <Avatar alt={egg.species} src={eggimg} />
                       <Box ml={2}>
                         <Typography><b>{egg.eggNumber}</b></Typography>
                         <Typography variant="body2" color="textSecondary">
@@ -115,7 +117,7 @@ const IncubationComponent = () => {
                   </TableCell>
                   <TableCell>
                     <Box display="flex" alignItems="center">
-                      <Avatar alt={egg.species} src='bird.jpg' />
+                      <Avatar alt={egg.species} src={bird} />
                       <Box ml={2}>
                         <Typography><b>{egg.species}</b></Typography>
                         <Typography variant="body2" color="textSecondary">

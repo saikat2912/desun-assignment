@@ -5,6 +5,7 @@ import EggIcon from '@mui/icons-material/Egg';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 import { Box, IconButton } from '@mui/material';
+import logo from "../../../img/logo.png"
 
 const Navbar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -20,7 +21,7 @@ const Navbar = () => {
     
       <IconButton color="inherit" className="toggle-button" onClick={toggleNavbar}>
        
-        {isCollapsed ? '☰' :<><img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Logo" className="logo" />  <KeyboardDoubleArrowLeftIcon /></>}
+        {isCollapsed ? '☰' :<><img src={logo} alt="Logo" className="logo" />  <KeyboardDoubleArrowLeftIcon /></>}
       </IconButton>
    
        
