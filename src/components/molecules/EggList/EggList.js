@@ -26,6 +26,7 @@ import { styled } from '@mui/system';
 import { Link } from 'react-router-dom';
 import IncubationComponent from '../IncubationTable/IncubationTable';
 import { green, orange, red } from '@mui/material/colors';
+import { eggData } from '../../../util/datas';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   backgroundColor: '#C1D3D0',
@@ -33,129 +34,8 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   fontWeight: 'bold',
 }));
 
-const eggData = [
-  {
-    no: 1,
-    species: 'Rainbow Lorikeet',
-    eggNumber: '0273 / 24',
-    siteName: 'Site Name XYZ',
-    collectedOn: '10 Apr 2024',
-    batchNo: '2024/0001234/3A',
-    status: 'Intact',
-    collectedBy: 'Jordan Stevenson',
-    designation: 'Designation',
-    avatarUrl: 'bird.jpg',
-    avatarPerson: 'modi.jpg',
-  },
-  {
-    no: 2,
-    species: 'Rainbow Lorikeet',
-    eggNumber: '0273 / 24',
-    siteName: 'Site Name XYZ',
-    collectedOn: '10 Apr 2024',
-    batchNo: '2024/0001234/3A',
-    status: 'Rotten',
-    collectedBy: 'Jordan Stevenson',
-    designation: 'Designation',
-    avatarUrl: 'bird.jpg',
-    avatarPerson: 'modi.jpg',
-  },
-  {
-    no: 3,
-    species: 'Rainbow Lorikeet',
-    eggNumber: '0273 / 24',
-    siteName: 'Site Name XYZ',
-    collectedOn: '10 Apr 2024',
-    batchNo: '2024/0001234/3A',
-    status: 'Rotten',
-    collectedBy: 'Jordan Stevenson',
-    designation: 'Designation',
-    avatarUrl: 'bird.jpg',
-    avatarPerson: 'modi.jpg',
-  },
-  {
-    no: 4,
-    species: 'Rainbow Lorikeet',
-    eggNumber: '0273 / 24',
-    siteName: 'Site Name XYZ',
-    collectedOn: '10 Apr 2024',
-    batchNo: '2024/0001234/3A',
-    status: 'Rotten',
-    collectedBy: 'Jordan Stevenson',
-    designation: 'Designation',
-    avatarUrl: 'bird.jpg',
-    avatarPerson: 'modi.jpg',
-  },
 
-  {
-    no: 5,
-    species: 'Rainbow Lorikeet',
-    eggNumber: '0273 / 24',
-    siteName: 'Site Name XYZ',
-    collectedOn: '10 Apr 2024',
-    batchNo: '2024/0001234/3A',
-    status: 'Rotten',
-    collectedBy: 'Jordan Stevenson',
-    designation: 'Designation',
-    avatarUrl: 'bird.jpg',
-    avatarPerson: 'modi.jpg',
-  },
-  {
-    no: 6,
-    species: 'Rainbow Lorikeet',
-    eggNumber: '0273 / 24',
-    siteName: 'Site Name XYZ',
-    collectedOn: '10 Apr 2024',
-    batchNo: '2024/0001234/3A',
-    status: 'Rotten',
-    collectedBy: 'Jordan Stevenson',
-    designation: 'Designation',
-    avatarUrl: 'bird.jpg',
-    avatarPerson: 'modi.jpg',
-  },
-  {
-    no: 7,
-    species: 'Rainbow Lorikeet',
-    eggNumber: '0273 / 24',
-    siteName: 'Site Name XYZ',
-    collectedOn: '10 Apr 2024',
-    batchNo: '2024/0001234/3A',
-    status: 'Rotten',
-    collectedBy: 'Jordan Stevenson',
-    designation: 'Designation',
-    avatarUrl: 'bird.jpg',
-    avatarPerson: 'modi.jpg',
-  },
-  {
-    no: 8,
-    species: 'Rainbow Lorikeet',
-    eggNumber: '0273 / 24',
-    siteName: 'Site Name XYZ',
-    collectedOn: '10 Apr 2024',
-    batchNo: '2024/0001234/3A',
-    status: 'Rotten',
-    collectedBy: 'Jordan Stevenson',
-    designation: 'Designation',
-    avatarUrl: 'bird.jpg',
-    avatarPerson: 'modi.jpg',
-  }
-];
 
-const StyledDialog = styled(Dialog)(({ theme }) => ({
-  '& .MuiPaper-root': {
-    position: 'absolute',
-    top: theme.spacing(2),
-    right: theme.spacing(2),
-    margin: 0,
-  },
-}));
-
-const statusColors = {
-  Intact: 'lightgreen',
-  Rotten: 'lightcoral',
-  Cracked: 'lightyellow',
-  Broken: 'lightpink',
-};
 
 const EggList = () => {
   const [currentState, setCurrentState] = useState('');

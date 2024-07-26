@@ -23,6 +23,7 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import SearchIcon from '@mui/icons-material/Search';
 import { green, orange, red } from '@mui/material/colors';
+import { dashboard_rows } from '../../../util/datas';
 import { styled } from '@mui/system';
 
 const StyledTableContainer = styled(TableContainer)({
@@ -59,29 +60,12 @@ const DashboardTable = () => {
         setRowsPerPage(parseInt(event.target.value, 10));
         setPage(0);
     };
-    const rows = [
-        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' },
-        { no: 1, eggNumber: '0273 / 24', status: 'Completed', species: 'Rainbow Lorikeet', transferredFrom: 'Site Name XYZ', date: '10 Apr 2024', receivingAt: 'Site Name XYZ', nursery: 'NUR1234', avatarUrl: 'bird.jpg' }
-        
+    
 
-    ];
-
-    const displayedRows = rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage);
+    const displayedRows = dashboard_rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage);
 
     const handleSearch = () => {
         
-        console.log(`Searching from ${fromDate} to ${tilDate} with query "${searchQuery}"`);
     };
 
 
@@ -203,7 +187,7 @@ const DashboardTable = () => {
                     <TablePagination
                         rowsPerPageOptions={[10, 25, 50]}
                         component="div"
-                        count={rows.length}
+                        count={dashboard_rows.length}
                         rowsPerPage={rowsPerPage}
                         page={page}
                         onPageChange={handleChangePage}

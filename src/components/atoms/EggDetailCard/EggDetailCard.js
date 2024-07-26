@@ -13,7 +13,7 @@ export default function EggDetailCard() {
           component="img"
           height="200"
           image="card_details/parrot.jpg"
-          alt="green iguana"
+          alt="parrot"
         />
     </Card>
   );
