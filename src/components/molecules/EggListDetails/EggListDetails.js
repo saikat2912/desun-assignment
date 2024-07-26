@@ -9,13 +9,11 @@ const EggListDetails = () => {
   return (
     <div style={{backgroundColor:'#EFF5F2'}}>
          <Box p={2} >
-        <Typography variant="subtitle1" gutterBottom style={{marginLeft:250}}>
+        <Typography variant="subtitle1" gutterBottom style={{marginLeft:250,marginBottom:30}}>
          <span style={{color:'#BAC3BE'}}>Egg Module / Egg List </span>  / Egg Details
         </Typography>
        
-      <Grid container>
-        <Typography style={{fontSize:20,color:'black'}}>hello</Typography>
-      </Grid>
+      
       <Grid container spacing={5}>
         <Grid item xs={12} md={12} sm={12}>
         <EggDetailHead />
