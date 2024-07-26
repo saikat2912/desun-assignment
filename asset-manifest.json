@@ -1,16 +1,18 @@
 {
   "files": {
     "main.css": "/desun-assignment/static/css/main.faa554ff.css",
-    "main.js": "/desun-assignment/static/js/main.06738410.js",
+    "main.js": "/desun-assignment/static/js/main.e1aa8474.js",
     "static/js/453.3f0a577a.chunk.js": "/desun-assignment/static/js/453.3f0a577a.chunk.js",
+    "static/media/modi.jpg": "/desun-assignment/static/media/modi.213bb135fb5a0ff4cbdc.jpg",
+    "static/media/bird.jpg": "/desun-assignment/static/media/bird.7cf03b5d6f0681e94636.jpg",
     "static/media/logo.svg": "/desun-assignment/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/desun-assignment/index.html",
     "main.faa554ff.css.map": "/desun-assignment/static/css/main.faa554ff.css.map",
-    "main.06738410.js.map": "/desun-assignment/static/js/main.06738410.js.map",
+    "main.e1aa8474.js.map": "/desun-assignment/static/js/main.e1aa8474.js.map",
     "453.3f0a577a.chunk.js.map": "/desun-assignment/static/js/453.3f0a577a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.faa554ff.css",
-    "static/js/main.06738410.js"
+    "static/js/main.e1aa8474.js"
   ]
 }
